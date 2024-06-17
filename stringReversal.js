@@ -96,13 +96,36 @@
 
 // console.log(swapArray("hello".split("")));
 
-let numbers = [10, 5, 2, 40, 1];
+// let numbers = [10, 5, 2, 40, 1];
 
-// Custom comparison function for ascending numerical sort
-function compareNumbers(a, b) {
-  console.log(a,b, a-b);
-    return a - b;
+// // Custom comparison function for ascending numerical sort
+// function compareNumbers(a, b) {
+//   console.log(a,b, a-b);
+//     return a - b;
+// }
+
+// numbers.sort(compareNumbers);
+// console.log(numbers);
+
+function strReversal(str){
+  const result = [];
+  for(const st of str){
+    result.unshift(st);
+  }
+  return result.join("");
 }
-
-numbers.sort(compareNumbers);
-console.log(numbers);
+function strReversalst(str){
+  let result = "";
+  for(const st of str){
+    result = st + result;
+  }
+  return result;
+}
+function strReversalReduce(str){
+  return str.split('').reduce((rev, char) =>{ 
+    console.log(rev, char);
+    return char + rev
+  }, '');
+}
+// return str.split('').reduce((rev, char) => char + rev, '');
+console.log(strReversalReduce("hello"));
