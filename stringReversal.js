@@ -123,7 +123,6 @@ function strReversalst(str){
 }
 function strReversalReduce(str){
   return str.split('').reduce((rev, char) =>{ 
-    console.log(rev, char);
     return char + rev
   }, '');
 }
